@@ -60,7 +60,7 @@
     display: block;
     color: white;
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     font-size: 1.1rem;
     font-weight: 500;
   }
