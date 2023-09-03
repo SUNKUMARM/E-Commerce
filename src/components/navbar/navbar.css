@@ -1,0 +1,84 @@
+.navbar-container {
+  width: 100%;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+  padding: 0.5rem;
+}
+.navbar-icon {
+  color: white;
+}
+.navbar-icon-parent {
+  display: block;
+}
+#myElement {
+  display: none;
+}
+.navbar-parent {
+  background: black;
+  border: 2px solid black;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-List {
+  background: black;
+  color: white;
+  padding: 1rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.navbar-List > p {
+  background: rgba(29, 27, 27, 0.899);
+  padding: 1rem;
+  margin-bottom: 5px;
+  border-radius: 15px;
+}
+.button {
+  display: flex;
+  gap: 10px;
+}
+.icon {
+  position: relative;
+  top: 2px;
+}
+
+.navbar-List > div {
+  background: rgba(29, 27, 27, 0.899);
+  margin-bottom: 5px;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+@media (min-width: 760px) {
+  #myElement {
+    cursor: pointer;
+    display: block;
+    color: white;
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  #myElement > p {
+    padding: 1rem;
+    margin-bottom: 5px;
+    border-radius: 15px;
+  }
+  #myElement > div {
+    padding: 1rem;
+    margin-bottom: 5px;
+    border-radius: 15px;
+  }
+  .navbar-icon-parent {
+    display: none;
+  }
+}
