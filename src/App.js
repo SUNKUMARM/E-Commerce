@@ -1,4 +1,5 @@
 import NavBar from "./components/navbar/NavBar";
+import CartView from "./pages/cart/CartView";
 import Home from "./pages/home/Home";
 import Products from "./pages/products/Products";
 
@@ -8,6 +9,7 @@ function App() {
       <NavBar />
       <Home />
       <Products />
+      <CartView />
     </div>
   );
 }

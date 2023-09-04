@@ -16,7 +16,16 @@
   font-size: 1rem;
 }
 .item > p {
-  padding: 1rem 1rem;
+  padding: 0rem 1rem;
+}
+.addCart {
+  padding: 0.5rem;
+  margin: 0 0 1rem 1rem;
+  width: 40%;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  background-color: #13ab67;
 }
 
 @media (min-width: 720px) {
