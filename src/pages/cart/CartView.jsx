@@ -8,6 +8,7 @@ const CartView = () => {
   return (
     <div className="cart-container">
       <h1 className="cart-title">CartView</h1>
+      {/* {cartState.cartItems ? {} : <h1>Your cart is empty</h1>} */}
       <ul className="cart-content">
         {cartState.cartItems?.map((item) => (
           <li key={item.id} className="single-content">
