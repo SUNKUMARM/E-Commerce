@@ -7,6 +7,7 @@ import Contact from "../pages/contact/Contact";
 import Login from "../pages/login/Login";
 import SignUp from "../pages/signUp/SignUp";
 import CartView from "../pages/cart/CartView";
+import NotFound from "../pages/notFound/NotFound";
 
 const AppRoutes = () => {
   return (
@@ -18,7 +19,7 @@ const AppRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/signUp" element={<SignUp />} />
       <Route path="/Cart" element={<CartView />} />
-      <Route path="*" element={<h1>Not Found 404</h1>} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };

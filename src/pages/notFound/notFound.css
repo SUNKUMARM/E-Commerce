@@ -1,0 +1,40 @@
+.back {
+  background-color: black;
+  border: 2px solid black;
+}
+.notFound {
+  height: 100vh;
+  margin: 5rem;
+  margin-top: 1rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+.notFound > h2 {
+  font-size: 2rem;
+}
+.notFound > button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 7px;
+  background-color: #13ab67;
+  color: white;
+}
+@media (min-width: 760px) {
+  .notFound > h2 {
+    font-size: 4rem;
+  }
+  .notFound > h3 {
+    font-size: 2.5rem;
+  }
+  .notFound > button {
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
