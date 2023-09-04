@@ -34,7 +34,6 @@ const NavBar = () => {
         <div id="myElement">
           <p>Home</p>
           <p>Products</p>
-          <p>About</p>
           <p>Contact</p>
           <div className="button flex">
             <p>
@@ -54,7 +53,6 @@ const NavBar = () => {
         <div className="navbar-List flex">
           <p>Home</p>
           <p>Products</p>
-          <p>About</p>
           <p>Contact</p>
           <div className="button flex">
             <p>
