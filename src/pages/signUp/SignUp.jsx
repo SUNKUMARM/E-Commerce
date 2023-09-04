@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import "./signUp.css";
 import Contact from "../contact/Contact";
 import InputField from "../../components/inputField/InputField";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [show, setShow] = useState(false);
+  const navigator = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -14,8 +16,10 @@ const SignUp = () => {
     setPassword("");
   };
   return (
-    <>
-      <h5 className="login-logo">Enity</h5>
+    <div name="/signUp">
+      <h5 className="login-logo" onClick={() => navigator("/")}>
+        Enity
+      </h5>
       <div className="login-grand-parent  ">
         <div className="login-parent ">
           <form className="login  " onSubmit={handleSubmit}>
@@ -43,16 +47,22 @@ const SignUp = () => {
             </span>
             <div className="login-remember  ">
               <InputField
-                value="Sign in"
+                value="Sign up"
                 type="submit"
                 className="input-sign-in"
               />
             </div>
           </form>
+          <h4 className="login-sign-up">
+            Already subscribed to Enity?
+            <b className="bold" onClick={() => navigator("/login")}>
+              Sign In now.
+            </b>
+          </h4>
         </div>
       </div>
       <Contact />
-    </>
+    </div>
   );
 };
 

@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import "./login.css";
 import InputField from "../../components/inputField/InputField";
 import Contact from "../contact/Contact";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [show, setShow] = useState(false);
+  const navigator = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,8 +17,10 @@ const Login = () => {
   };
 
   return (
-    <>
-      <h5 className="login-logo">Enity</h5>
+    <div name="/login">
+      <h5 className="login-logo" onClick={() => navigator("/")}>
+        Enity
+      </h5>
       <div className="login-grand-parent  ">
         <div className="login-parent ">
           <form className="login  " onSubmit={handleSubmit}>
@@ -59,7 +63,9 @@ const Login = () => {
           <div className="login-description">
             <h4 className="login-sign-up">
               New to Enity?
-              <b className="bold">Sign up now.</b>
+              <b className="bold" onClick={() => navigator("/signUp")}>
+                Sign up now.
+              </b>
             </h4>
             <p className="content-learn">
               This page is protected by Google reCAPTCHA to ensure you're not a
@@ -81,7 +87,7 @@ const Login = () => {
         </div>
       </div>
       <Contact />
-    </>
+    </div>
   );
 };
 

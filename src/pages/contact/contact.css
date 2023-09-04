@@ -12,6 +12,15 @@
   display: flex;
   gap: 2rem;
 }
+.contact-icon > p {
+  cursor: pointer;
+}
+.content > p {
+  cursor: pointer;
+}
+.content > a {
+  cursor: pointer;
+}
 .content {
   display: grid;
   gap: 1rem;

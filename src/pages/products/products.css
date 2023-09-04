@@ -12,6 +12,7 @@
   padding: 1.5rem;
 }
 .btn {
+  cursor: pointer;
   border: none;
   color: white;
   margin: 0.2rem 0;
@@ -21,6 +22,7 @@
   border-radius: 8px;
 }
 .select-btn {
+  cursor: pointer;
   border: none;
   background: rgba(29, 27, 27, 0.899);
   color: white;

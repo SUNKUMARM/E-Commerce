@@ -1,4 +1,6 @@
 .navbar-container {
+  position: fixed;
+  top: 0;
   width: 100%;
   justify-content: space-between;
 }
@@ -32,9 +34,11 @@
   font-size: 0.9rem;
   font-weight: 400;
 }
-.navbar-List > p {
+.navbar-List > a {
   background: rgba(29, 27, 27, 0.899);
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 5px;
   border-radius: 15px;
 }
@@ -68,7 +72,7 @@
     font-size: 1.5rem;
   }
 
-  #myElement > p {
+  #myElement > a {
     padding: 1rem;
     margin-bottom: 5px;
     border-radius: 15px;

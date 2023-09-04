@@ -2,6 +2,12 @@
   display: grid;
   place-items: center;
 }
+.login-logo {
+  color: white;
+  cursor: pointer;
+  padding: 2rem 2rem 0 2rem;
+  font-size: 2rem;
+}
 .login-title {
   color: white;
 }
@@ -46,15 +52,21 @@
 }
 
 .learn-more {
+  cursor: pointer;
   border: none;
   background: none;
   color: #13ab67;
   margin-left: 7px;
 }
 .bold {
+  cursor: pointer;
   color: white;
   font-size: 0.9rem;
   text-decoration: underline;
+}
+.login-sign-up {
+  font-size: 0.9rem;
+  color: white;
 }
 
 @media (min-width: 760px) {
@@ -93,5 +105,8 @@
   .login-title {
     font-size: 2.8rem;
     margin-bottom: 1rem;
+  }
+  .login-sign-up {
+    font-size: 1.1rem;
   }
 }

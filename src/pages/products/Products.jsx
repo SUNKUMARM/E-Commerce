@@ -27,7 +27,7 @@ const Products = () => {
   }, [product]);
 
   return (
-    <>
+    <div name="/products">
       <h1 className="title">Latest Collections</h1>
       <hr />
       <br />
@@ -67,7 +67,7 @@ const Products = () => {
           <Layout products={finalProduct} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
