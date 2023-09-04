@@ -1,19 +1,22 @@
-import NavBar from "./components/navbar/NavBar";
-import About from "./pages/about/About";
-import Contact from "./pages/contact/Contact";
+// import NavBar from "./components/navbar/NavBar";
+// import About from "./pages/about/About";
+// import Contact from "./pages/contact/Contact";
 // import CartView from "./pages/cart/CartView";
-import Home from "./pages/home/Home";
+// import Home from "./pages/home/Home";
 // import Products from "./pages/products/Products";
+
+import Login from "./pages/login/Login";
 
 function App() {
   return (
     <div className="App" style={{ backgroundColor: "black" }}>
-      <NavBar />
+      {/* <NavBar />
       <Home />
-      {/* <Products />
-      <CartView /> */}
+      <Products />
+      <CartView />
       <About />
-      <Contact />
+      <Contact /> */}
+      <Login />
     </div>
   );
 }

@@ -33,6 +33,7 @@ const NavBar = () => {
         </div>
         <div id="myElement">
           <p>Home</p>
+          <p>About</p>
           <p>Products</p>
           <p>Contact</p>
           <div className="button flex">
@@ -52,6 +53,7 @@ const NavBar = () => {
       {show && (
         <div className="navbar-List flex">
           <p>Home</p>
+          <p>About</p>
           <p>Products</p>
           <p>Contact</p>
           <div className="button flex">
