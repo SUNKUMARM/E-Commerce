@@ -1,0 +1,28 @@
+.contact-container {
+  background: rgba(29, 27, 27, 0.899);
+  color: gray;
+  padding: 2rem;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-size: 0.9rem;
+}
+.contact-icon {
+  display: flex;
+  gap: 2rem;
+}
+.content {
+  display: grid;
+  gap: 1rem;
+  text-decoration: underline;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+@media (min-width: 760px) {
+  .contact-container {
+    font-size: 1.2rem;
+  }
+  .content {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}

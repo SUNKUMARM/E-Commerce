@@ -13,7 +13,7 @@ const About = () => {
           experience to shoppers across the country with the widest range of
           brands and products on its portal. The brand is making a conscious
           effort to bring the power of fashion to shoppers with an array of the
-          latest and trendiest products available in the country
+          latest and trendiest products available in the country.
         </p>
       </div>
     </div>
