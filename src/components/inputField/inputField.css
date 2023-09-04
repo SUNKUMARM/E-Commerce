@@ -6,7 +6,7 @@
     height: 2.5rem;
     border-radius: 8px;
     margin: 0.5rem 0;
-    background: black;
+    background: rgb(44, 43, 43);
     color: white;
     font-weight: 500;
     font-size: 0.8rem;
@@ -24,13 +24,13 @@
 
 @media (min-width: 760px) {
   .input-box {
-    height: 3.5rem;
+    height: 3.9rem;
     color: white;
     font-size: 1.1rem;
     font-weight: 500;
   }
   .input-sign-in {
-    height: 3.4rem;
+    height: 3.8rem;
     font-size: 1.1rem;
     font-weight: 600;
   }

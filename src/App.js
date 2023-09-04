@@ -6,6 +6,7 @@
 // import Products from "./pages/products/Products";
 
 import Login from "./pages/login/Login";
+import SignUp from "./pages/signUp/SignUp";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <About />
       <Contact /> */}
       <Login />
+      <SignUp />
     </div>
   );
 }
