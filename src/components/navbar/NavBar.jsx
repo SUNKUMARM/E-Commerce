@@ -41,9 +41,7 @@ const NavBar = () => {
           <Link to="/about" smooth={true} duration={500}>
             About
           </Link>
-          <Link to="/products" smooth={true} duration={500}>
-            Products
-          </Link>
+          <div onClick={() => navigator("/products")}>Products</div>
           <Link to="/contact" smooth={true} duration={500}>
             Contact
           </Link>
@@ -69,9 +67,7 @@ const NavBar = () => {
           <Link to="/about" smooth={true} duration={500}>
             About
           </Link>
-          <Link to="/products" smooth={true} duration={500}>
-            Products
-          </Link>
+          <div onClick={() => navigator("/products")}>Products</div>
           <Link to="/contact" smooth={true} duration={500}>
             Contact
           </Link>
@@ -81,9 +77,9 @@ const NavBar = () => {
             </p>
             <p>Login</p>
           </div>
-          <div className="button flex">
+          <div className="button flex" onClick={() => navigator("/cart")}>
             <p>
-              <FaShoppingCart size={20} onClick={() => navigator("/cart")} />
+              <FaShoppingCart size={20} />
             </p>
             <p>Cart</p>
           </div>

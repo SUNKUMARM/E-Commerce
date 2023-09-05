@@ -40,7 +40,7 @@ const Branding = () => {
         <p>VIEW ALL COLLECTIONS</p>
         <BsArrowRight
           className="branding-icon"
-          onClick={() => navigator("/")}
+          onClick={() => navigator("/products")}
         />
       </div>
     </div>

@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./products.css";
 import Layout from "../layout/Layout";
 import { datas } from "../../components/source/source";
+import { FaShoppingCart } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import Contact from "../contact/Contact";
 
 const Products = () => {
+  const navigator = useNavigate();
   const [product, setProduct] = useState(datas);
   const [multiGender, setMultiGender] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -28,6 +32,15 @@ const Products = () => {
 
   return (
     <div name="/products">
+      <div className="products-nav">
+        <h5 className="logo" onClick={() => navigator("/")}>
+          Enity
+        </h5>
+        <div className="cart" onClick={() => navigator("/cart")}>
+          <FaShoppingCart />
+          <p>Cart</p>
+        </div>
+      </div>
       <h1 className="title">Latest Collections</h1>
       <hr />
       <br />
@@ -67,6 +80,7 @@ const Products = () => {
           <Layout products={finalProduct} />
         </div>
       </div>
+      <Contact />
     </div>
   );
 };

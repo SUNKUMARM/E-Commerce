@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import "./cart.css";
 import { useNavigate } from "react-router-dom";
+import empty from "../../assets/empty.jpg";
 
 const CartView = () => {
   const cartState = useSelector((store) => store.cartReducer);
@@ -9,7 +10,7 @@ const CartView = () => {
 
   return (
     <div name="/cart">
-      <h5 className="login-logo" onClick={() => navigator("/")}>
+      <h5 className="login-logo" onClick={() => navigator("/products")}>
         Enity
       </h5>
       <hr />
@@ -45,7 +46,11 @@ const CartView = () => {
           ))}
         </ul>
         {cartState.cartItems.length === 0 ? (
-          <h1>Your cart is empty</h1>
+          <p className="empty">
+            <img src={empty} alt="" />
+            Your cart is empty.
+            <button>shop now</button>
+          </p>
         ) : (
           <h1 className="cart-title">Grand Total : {cartState?.total}</h1>
         )}
