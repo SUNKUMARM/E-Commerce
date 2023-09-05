@@ -2,9 +2,9 @@ import React from "react";
 import shop from "../../assets/shop3.jpg";
 import "./home.css";
 import NavBar from "../../components/navbar/NavBar";
-import Products from "../products/Products";
 import About from "../about/About";
 import Contact from "../contact/Contact";
+import Branding from "../branding/Branding";
 
 const Home = () => {
   return (
@@ -27,7 +27,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <Products />
+      <Branding />
       <About />
       <Contact />
     </>

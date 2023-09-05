@@ -21,7 +21,7 @@
 }
 @media (min-width: 760px) {
   .about-container {
-    margin-top: 6rem;
+    margin: 2rem 0 6rem 0;
   }
   .about-content {
     padding: 3rem;
