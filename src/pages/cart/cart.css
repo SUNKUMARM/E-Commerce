@@ -50,6 +50,7 @@
   margin-bottom: 2rem;
 }
 .empty > button {
+  cursor: pointer;
   border: none;
   padding: 0.7rem;
   font-weight: 400;
@@ -58,6 +59,10 @@
   font-size: 0.9rem;
   color: white;
   margin-top: 2rem;
+  transition: transform 450ms;
+}
+.empty > button:hover {
+  transform: scale(1.08);
 }
 @media (min-width: 860px) {
   .cart-img {

@@ -49,7 +49,7 @@ const CartView = () => {
           <p className="empty">
             <img src={empty} alt="" />
             Your cart is empty.
-            <button>shop now</button>
+            <button onClick={() => navigator("/products")}>shop now</button>
           </p>
         ) : (
           <h1 className="cart-title">Grand Total : {cartState?.total}</h1>

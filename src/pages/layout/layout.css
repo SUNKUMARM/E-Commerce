@@ -11,6 +11,7 @@
   padding: 1rem 1rem;
   border-radius: 15px;
 }
+
 .item > h3 {
   padding: 0 1rem;
   font-size: 1rem;
@@ -27,6 +28,9 @@
   border: none;
   color: white;
   background-color: #13ab67;
+}
+.addCart:active {
+  background: black;
 }
 
 @media (min-width: 720px) {

@@ -27,7 +27,11 @@
   background-color: #13ab67;
   width: 6rem;
   border-radius: 8px;
+  transition: transform 450ms;
   align-self: center;
+}
+.branding-icon:hover {
+  transform: scale(1.08);
 }
 .trending {
   display: grid;
@@ -40,10 +44,14 @@
   width: 100%;
   padding: 1rem;
   border-radius: 30px;
+  transition: transform 450ms;
+}
+.trending > img:hover {
+  transform: scale(1.08);
 }
 @media (min-width: 760px) {
   .trending {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
     padding: 1rem;
     margin: 3rem;
