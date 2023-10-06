@@ -1,24 +1,43 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
+import NotFound from "../pages/notFound/NotFound";
+// import LoginAuth from "../components/auth/LoginAuth";
 import Home from "../pages/home/Home";
-import Products from "../pages/products/Products";
 import About from "../pages/about/About";
 import Contact from "../pages/contact/Contact";
 import Login from "../pages/login/Login";
 import SignUp from "../pages/signUp/SignUp";
-import CartView from "../pages/cart/CartView";
-import NotFound from "../pages/notFound/NotFound";
+const Products = lazy(() => import("../pages/products/Products"));
+const CartView = lazy(() => import("../pages/cart/CartView"));
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/products" element={<Products />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      <Route
+        path="/products"
+        element={
+          <Suspense fallback={<h1>Loading...</h1>}>
+            {/* <LoginAuth> */}
+            <Products />
+            {/* </LoginAuth> */}
+          </Suspense>
+        }
+      />
       <Route path="/login" element={<Login />} />
       <Route path="/signUp" element={<SignUp />} />
-      <Route path="/Cart" element={<CartView />} />
+      <Route
+        path="/cart"
+        element={
+          <Suspense fallback={<h1>Loading...</h1>}>
+            {/* <LoginAuth> */}
+            <CartView />
+            {/* </LoginAuth> */}
+          </Suspense>
+        }
+      />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

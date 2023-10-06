@@ -1,44 +1,30 @@
-import React, { useReducer } from "react";
+import React, { useState } from "react";
 import "./signUp.css";
 import Contact from "../contact/Contact";
 import InputField from "../../components/inputField/InputField";
 import { useNavigate } from "react-router-dom";
-import { useUserContext } from "../../context/ContextProvider";
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "email": {
-      return { ...state, email: action.payload };
-    }
-    case "password": {
-      return { ...state, password: action.payload };
-    }
-    default: {
-      return state;
-    }
-  }
-};
-const initialState = {
-  email: "",
-  password: "",
-};
+import { auth } from "../../firebase";
 
 const SignUp = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigator = useNavigate();
-  const [user, dispatch] = useReducer(reducer, initialState);
-  const { login } = useUserContext();
-
-  const handleChange = (e) =>
-    dispatch({ type: e.target.name, payload: e.target.value });
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    login(user);
+    setEmail("");
+    setPassword("");
     alert("User Register Successfully");
+    try {
+      await auth.createUserWithEmailAndPassword(email, password);
+      navigator("/login");
+    } catch (error) {
+      console.log(error);
+      alert(error);
+    }
   };
   return (
     <div name="/signUp">
-      <h5 className="login-logo" onClick={() => navigator("/")}>
+      <h5 className="login-logo" onClick={() => navigator("/login")}>
         Enity
       </h5>
       <div className="login-grand-parent  ">
@@ -52,16 +38,16 @@ const SignUp = () => {
                 type="email"
                 required
                 className="input-box"
-                onChange={handleChange}
-                value={user.email}
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
                 name="email"
               />
               <InputField
                 placeholder="Password"
                 type="password"
                 required
-                onChange={handleChange}
-                value={user.password}
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
                 name="password"
                 className="input-box"
               />

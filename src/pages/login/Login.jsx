@@ -3,6 +3,7 @@ import "./login.css";
 import InputField from "../../components/inputField/InputField";
 import Contact from "../contact/Contact";
 import { useNavigate } from "react-router-dom";
+import { auth } from "../../firebase";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -15,6 +16,13 @@ const Login = () => {
     alert("login success");
     setEmail("");
     setPassword("");
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      navigator("/");
+    } catch (error) {
+      console.log(error);
+      alert(error);
+    }
   };
 
   return (
@@ -26,6 +34,7 @@ const Login = () => {
         <div className="login-parent ">
           <form className="login  " onSubmit={handleSubmit}>
             <h1 className="login-title">Sign In</h1>
+
             <span className="input-parent  ">
               <InputField
                 placeholder="Email adders"
