@@ -3,16 +3,29 @@ import { useSelector } from "react-redux";
 import "./cart.css";
 import { useNavigate } from "react-router-dom";
 import empty from "../../assets/empty.jpg";
+import { auth } from "../../firebase";
 
 const CartView = () => {
   const cartState = useSelector((store) => store.cartReducer);
   const navigator = useNavigate();
 
+  const handleLogout = async () => {
+    try {
+      await auth.signOut();
+      navigator("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div name="/cart">
-      <h5 className="login-logo" onClick={() => navigator("/products")}>
-        Enity
-      </h5>
+      <div className="products-nav">
+        <h5 className="logo" onClick={() => navigator("/")}>
+          Enity
+        </h5>
+        <h5 onClick={handleLogout}>Logout</h5>
+      </div>
       <hr />
       <div className="cart-container">
         <h1 className="cart-title">CartView</h1>

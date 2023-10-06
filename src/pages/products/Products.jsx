@@ -5,6 +5,7 @@ import { datas } from "../../components/source/source";
 import { FaShoppingCart } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Contact from "../contact/Contact";
+import { auth } from "../../firebase";
 
 const Products = () => {
   const navigator = useNavigate();
@@ -30,15 +31,29 @@ const Products = () => {
     setFinalProduct(product);
   }, [product]);
 
+  const handleLogout = async () => {
+    try {
+      await auth.signOut();
+      navigator("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div name="/products">
       <div className="products-nav">
         <h5 className="logo" onClick={() => navigator("/")}>
           Enity
         </h5>
-        <div className="cart" onClick={() => navigator("/cart")}>
-          <FaShoppingCart />
-          <p>Cart</p>
+        <div className="second">
+          <div className="cart" onClick={() => navigator("/cart")}>
+            <FaShoppingCart />
+            <p>Cart</p>
+          </div>
+          <p className="cart" onClick={handleLogout}>
+            Logout
+          </p>
         </div>
       </div>
       <h1 className="title">Latest Collections</h1>

@@ -18,7 +18,7 @@ const Login = () => {
     setPassword("");
     try {
       await auth.signInWithEmailAndPassword(email, password);
-      navigator("/");
+      navigator("/products");
     } catch (error) {
       console.log(error);
       alert(error);
