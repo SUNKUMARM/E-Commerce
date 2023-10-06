@@ -43,9 +43,7 @@ const Products = () => {
   return (
     <div name="/products">
       <div className="products-nav">
-        <h5 className="logo" onClick={() => navigator("/")}>
-          Enity
-        </h5>
+        <h5 className="logo">Enity</h5>
         <div className="second">
           <div className="cart" onClick={() => navigator("/cart")}>
             <FaShoppingCart />

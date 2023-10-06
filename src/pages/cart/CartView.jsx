@@ -21,7 +21,7 @@ const CartView = () => {
   return (
     <div name="/cart">
       <div className="products-nav">
-        <h5 className="logo" onClick={() => navigator("/")}>
+        <h5 className="logo" onClick={() => navigator("/products")}>
           Enity
         </h5>
         <h5 onClick={handleLogout}>Logout</h5>
